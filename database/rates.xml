@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rates>
+    <rate id="5333849" hotel_id="1375988" hotel_name="Foco Hoteis Test Property (Provider ID 826)" active="1" price="150.00">Standard Rate</rate>
+    <rate id="17786735" hotel_id="1375988" hotel_name="Foco Hoteis Test Property (Provider ID 826)" active="1" price="210.00">Tarifa com café</rate>
+    <rate id="62740214" hotel_id="1375988" hotel_name="Foco Hoteis Test Property (Provider ID 826)" active="1" price="350.00">Meia pensão</rate>
+</rates>

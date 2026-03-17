@@ -1,0 +1,5 @@
+<rooms>
+	<room id="137598802" hotel_id="1375988" hotel_name="Foco Hoteis Test Property (Provider ID 826)" inventory_count="15">Deluxe Double Room</room>
+	<room id="137598823" hotel_id="1375988" hotel_name="Foco Hoteis Test Property (Provider ID 826)" inventory_count="10">Superior Chalet</room>
+	<room id="137598824" hotel_id="1375988" hotel_name="Foco Hoteis Test Property (Provider ID 826)" inventory_count="5">Deluxe Triple Room</room>
+</rooms>

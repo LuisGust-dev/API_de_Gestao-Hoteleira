@@ -1,0 +1,152 @@
+<reservations>
+    <reservation>
+        <customer>
+            <first_name>Bruno</first_name>
+            <last_name>Nascimento</last_name>
+        </customer>
+        <date>2026-03-16</date>
+        <id>3820212524</id>
+        <hotel_id>1375988</hotel_id>
+        <room>
+            <arrival_date>2026-04-10</arrival_date>
+            <currencycode>BRL</currencycode>
+            <departure_date>2026-04-12</departure_date>
+            <guest_counts>
+                <guest_count count="2" type="adult"></guest_count>
+            </guest_counts>
+            <id>137598802</id>
+            <meal_plan>Breakfast included.</meal_plan>
+            <price date="2026-04-10" rate_id="5333849">150.00</price>
+            <price date="2026-04-11" rate_id="5333849">150.00</price>
+            <roomreservation_id>3641632087</roomreservation_id>
+            <totalprice>300.00</totalprice>
+        </room>
+        <time>09:15:00</time>
+    </reservation>
+
+    <reservation>
+        <customer>
+            <first_name>Carla</first_name>
+            <last_name>Mendes</last_name>
+        </customer>
+        <date>2026-03-16</date>
+        <id>3820212525</id>
+        <hotel_id>1375988</hotel_id>
+        <room>
+            <arrival_date>2026-05-05</arrival_date>
+            <currencycode>BRL</currencycode>
+            <departure_date>2026-05-07</departure_date>
+            <guest_counts>
+                <guest_count count="1" type="adult"></guest_count>
+            </guest_counts>
+            <id>137598823</id>
+            <meal_plan>Breakfast included.</meal_plan>
+            <price date="2026-05-05" rate_id="17786735">210.00</price>
+            <price date="2026-05-06" rate_id="17786735">210.00</price>
+            <roomreservation_id>3641632088</roomreservation_id>
+            <totalprice>420.00</totalprice>
+        </room>
+        <time>11:30:22</time>
+    </reservation>
+
+    <reservation>
+        <customer>
+            <first_name>Daniel</first_name>
+            <last_name>Oliveira</last_name>
+        </customer>
+        <date>2026-03-16</date>
+        <id>3820212526</id>
+        <hotel_id>1375988</hotel_id>
+        <room>
+            <arrival_date>2026-06-12</arrival_date>
+            <currencycode>BRL</currencycode>
+            <departure_date>2026-06-15</departure_date>
+            <guest_counts>
+                <guest_count count="2" type="adult"></guest_count>
+            </guest_counts>
+            <id>137598824</id>
+            <meal_plan>All inclusive.</meal_plan>
+            <price date="2026-06-12" rate_id="62740214">350.00</price>
+            <price date="2026-06-13" rate_id="62740214">350.00</price>
+            <price date="2026-06-14" rate_id="62740214">350.00</price>
+            <roomreservation_id>3641632089</roomreservation_id>
+            <totalprice>1050.00</totalprice>
+        </room>
+        <time>14:45:10</time>
+    </reservation>
+
+    <reservation>
+        <customer>
+            <first_name>Elena</first_name>
+            <last_name>Rocha</last_name>
+        </customer>
+        <date>2026-03-16</date>
+        <id>3820212527</id>
+        <hotel_id>1375988</hotel_id>
+        <room>
+            <arrival_date>2026-07-20</arrival_date>
+            <currencycode>BRL</currencycode>
+            <departure_date>2026-07-22</departure_date>
+            <guest_counts>
+                <guest_count count="2" type="adult"></guest_count>
+            </guest_counts>
+            <id>137598802</id>
+            <meal_plan>Breakfast included.</meal_plan>
+            <price date="2026-07-20" rate_id="62740214">380.00</price>
+            <price date="2026-07-21" rate_id="62740214">380.00</price>
+            <roomreservation_id>3641632090</roomreservation_id>
+            <totalprice>760.00</totalprice>
+        </room>
+        <time>16:20:05</time>
+    </reservation>
+
+    <reservation>
+        <customer>
+            <first_name>Fabio</first_name>
+            <last_name>Lins</last_name>
+        </customer>
+        <date>2026-03-16</date>
+        <id>3820212528</id>
+        <hotel_id>1375988</hotel_id>
+        <room>
+            <arrival_date>2026-08-15</arrival_date>
+            <currencycode>BRL</currencycode>
+            <departure_date>2026-08-16</departure_date>
+            <guest_counts>
+                <guest_count count="1" type="adult"></guest_count>
+            </guest_counts>
+            <id>137598823</id>
+            <meal_plan>No meals.</meal_plan>
+            <price date="2026-08-15" rate_id="5333849">125.00</price>
+            <roomreservation_id>3641632091</roomreservation_id>
+            <totalprice>125.00</totalprice>
+        </room>
+        <time>18:10:00</time>
+    </reservation>
+
+    <reservation>
+        <customer>
+            <first_name>Gisele</first_name>
+            <last_name>Souza</last_name>
+        </customer>
+        <date>2026-03-16</date>
+        <id>3820212529</id>
+        <hotel_id>1375988</hotel_id>
+        <room>
+            <arrival_date>2026-09-10</arrival_date>
+            <currencycode>BRL</currencycode>
+            <departure_date>2026-09-13</departure_date>
+            <guest_counts>
+                <guest_count count="3" type="adult"></guest_count>
+            </guest_counts>
+            <id>137598824</id>
+            <meal_plan>Breakfast included.</meal_plan>
+            <price date="2026-09-10" rate_id="17786735">290.00</price>
+            <price date="2026-09-11" rate_id="17786735">290.00</price>
+            <price date="2026-09-12" rate_id="17786735">290.00</price>
+            <roomreservation_id>3641632092</roomreservation_id>
+            <totalprice>870.00</totalprice>
+        </room>
+        <time>20:05:45</time>
+    </reservation>
+</reservations>
