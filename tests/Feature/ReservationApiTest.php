@@ -71,8 +71,8 @@ class ReservationApiTest extends TestCase
         $this->assertDatabaseHas('reservations', [
             'hotel_id' => $hotel->id,
             'room_id' => $room->id,
-            'arrival_date' => '2026-04-20',
-            'departure_date' => '2026-04-22',
+            'arrival_date' => '2026-04-20 00:00:00',
+            'departure_date' => '2026-04-22 00:00:00',
         ]);
     }
 
