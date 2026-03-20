@@ -7,12 +7,7 @@ use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
 
-/**
- * Provider responsável pelo sistema de eventos e listeners da aplicação.
- *
- * Neste projeto ele segue praticamente o padrão do Laravel porque o desafio
- * não exigiu eventos customizados de domínio.
- */
+
 class EventServiceProvider extends ServiceProvider
 {
     /**

@@ -5,12 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Broadcast;
 use Illuminate\Support\ServiceProvider;
 
-/**
- * Provider de broadcasting do Laravel.
- *
- * Não é parte central do desafio, mas continua disponível para registrar
- * canais caso a aplicação evolua para eventos em tempo real.
- */
+
 class BroadcastServiceProvider extends ServiceProvider
 {
     /**

@@ -7,9 +7,7 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 
 /**
  * Provider responsável por políticas de autorização e regras de acesso.
- *
- * O desafio não exigiu autenticação/autorização, então o provider permanece
- * com a estrutura padrão do framework.
+
  */
 class AuthServiceProvider extends ServiceProvider
 {
@@ -19,7 +17,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        //
+
     ];
 
     /**
@@ -27,6 +25,6 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+     
     }
 }

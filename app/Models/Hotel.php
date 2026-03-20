@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * Representa um hotel persistido a partir do XML de hotéis.
  *
- * Este model funciona como raiz de relacionamento para quartos, tarifas e reservas.
+ * Model funciona como raiz de relacionamento para quartos, tarifas e reservas.
  */
 class Hotel extends Model
 {
