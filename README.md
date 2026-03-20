@@ -190,4 +190,4 @@ php artisan test
 ## Observacoes
 
 - O campo `inventory_count` foi importado e persistido, mas a regra do desafio foi implementada literalmente: qualquer reserva conflitante para o mesmo quarto bloqueia uma nova reserva no periodo.
-- O ambiente desta maquina nao possui `pdo_sqlite` habilitado no PHP neste momento. O projeto esta configurado para SQLite, mas migrations e testes de integracao dependem dessa extensao estar instalada.
+
