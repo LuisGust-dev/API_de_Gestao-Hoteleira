@@ -8,12 +8,18 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * Model padrão de usuário autenticável do Laravel.
+ *
+ * Neste desafio ele não participa diretamente do domínio principal da API,
+ * mas permanece disponível como base para futuras evoluções com autenticação.
+ */
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
+     * Atributos que podem ser atribuídos em massa.
      *
      * @var array<int, string>
      */
@@ -24,7 +30,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
+     * Atributos que devem ficar ocultos durante a serialização.
      *
      * @var array<int, string>
      */
@@ -34,7 +40,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast.
+     * Atributos que devem ser convertidos automaticamente pelo Eloquent.
      *
      * @var array<string, string>
      */

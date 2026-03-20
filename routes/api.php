@@ -27,5 +27,5 @@ Route::post('/imports/xml', ImportController::class);
 // CRUD completo de quartos.
 Route::apiResource('rooms', RoomController::class);
 
-// Reservas expõem apenas leitura e criação, que são os casos de uso do desafio.
-Route::apiResource('reservations', ReservationController::class)->only(['index', 'store', 'show']);
+// Reservas expõem listagem, criação, consulta, atualização e remoção.
+Route::apiResource('reservations', ReservationController::class)->only(['index', 'store', 'show', 'update', 'destroy']);

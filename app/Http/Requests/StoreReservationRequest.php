@@ -4,13 +4,31 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Request responsável pela validação de criação de reservas.
+ *
+ * Esta validação garante integridade estrutural do payload antes da execução
+ * das regras de negócio de disponibilidade e persistência.
+ */
 class StoreReservationRequest extends FormRequest
 {
+    /**
+     * Define se a requisição está autorizada a prosseguir.
+     */
     public function authorize(): bool
     {
         return true;
     }
 
+    /**
+     * Regras de validação para criação de reservas.
+     *
+     * Esta camada valida:
+     * - existência de hotel, quarto e tarifa
+     * - consistência temporal básica das datas
+     * - estrutura do cliente, hóspedes e preços
+     * - integridade de identificadores quando enviados manualmente
+     */
     public function rules(): array
     {
         return [

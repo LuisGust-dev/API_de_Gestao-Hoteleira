@@ -9,15 +9,26 @@ use App\Models\Room;
 use Illuminate\Http\JsonResponse;
 
 /**
- * Responsável pelos endpoints de CRUD de quartos.
+ * Controller responsável pelo gerenciamento HTTP de quartos.
  *
- * Este controller permanece enxuto de forma intencional. As regras de negócio
- * mais críticas do desafio estão concentradas em reservas, não em quartos.
+ * Papel desta classe:
+ * - expor endpoints de CRUD para a entidade Room
+ * - delegar validação estrutural aos Form Requests
+ * - usar o model de forma direta, já que o caso de uso de quartos é simples
+ * - devolver respostas JSON adequadas para cada operação
+ *
+ * Diferentemente do fluxo de reservas, aqui não existe uma regra de negócio
+ * complexa exigindo service dedicado. Por isso o controller consegue operar
+ * diretamente sobre o model sem comprometer a organização da aplicação.
  */
 class RoomController extends Controller
 {
     /**
-     * Lista quartos incluindo o hotel relacionado para facilitar o consumo da API.
+     * Lista todos os quartos cadastrados.
+     *
+     * O relacionamento com hotel é carregado junto para que o consumidor da API
+     * consiga identificar rapidamente a qual hotel cada quarto pertence, sem a
+     * necessidade de múltiplas chamadas adicionais.
      */
     public function index(): JsonResponse
     {
@@ -25,7 +36,13 @@ class RoomController extends Controller
     }
 
     /**
-     * Cria um quarto a partir de um payload validado.
+     * Cria um novo quarto a partir de um payload validado.
+     *
+     * Fluxo:
+     * 1. StoreRoomRequest valida estrutura e integridade básica do payload
+     * 2. O model Room persiste o novo registro
+     * 3. O relacionamento com hotel é carregado para compor a resposta
+     * 4. A API retorna 201 Created
      */
     public function store(StoreRoomRequest $request): JsonResponse
     {
@@ -35,7 +52,11 @@ class RoomController extends Controller
     }
 
     /**
-     * Retorna um quarto com as reservas atualmente vinculadas a ele.
+     * Retorna o detalhe de um quarto específico.
+     *
+     * O model é resolvido automaticamente pelo route model binding do Laravel.
+     * Além do hotel, a resposta carrega também as reservas relacionadas para
+     * oferecer uma visão mais completa do estado atual do quarto.
      */
     public function show(Room $room): JsonResponse
     {
@@ -43,7 +64,11 @@ class RoomController extends Controller
     }
 
     /**
-     * Aplica atualização parcial ou completa com base no payload validado.
+     * Atualiza um quarto existente.
+     *
+     * O UpdateRoomRequest permite atualização parcial, então somente os campos
+     * enviados no payload são validados e persistidos. Após o update, o registro
+     * é recarregado do banco para garantir que a resposta reflita o estado final.
      */
     public function update(UpdateRoomRequest $request, Room $room): JsonResponse
     {
@@ -53,7 +78,10 @@ class RoomController extends Controller
     }
 
     /**
-     * Remove o quarto e retorna resposta 204 sem conteúdo.
+     * Remove um quarto existente.
+     *
+     * A resposta 204 é usada porque a operação foi concluída com sucesso e não há
+     * necessidade de retornar corpo na resposta após a exclusão.
      */
     public function destroy(Room $room): JsonResponse
     {

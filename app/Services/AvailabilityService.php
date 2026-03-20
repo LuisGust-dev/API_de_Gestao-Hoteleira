@@ -25,16 +25,26 @@ class AvailabilityService
      * Isso trata a reserva como intervalo [check-in, check-out), permitindo reservas
      * adjacentes quando uma começa exatamente no momento em que a outra termina.
      */
-    public function isRoomAvailable(int $roomId, string $arrivalDate, string $departureDate): bool
+    public function isRoomAvailable(
+        int $roomId,
+        string $arrivalDate,
+        string $departureDate,
+        ?int $ignoreReservationId = null
+    ): bool
     {
-        return ! Reservation::query()
+        $query = Reservation::query()
             ->where('room_id', $roomId)
             ->where(function ($query) use ($arrivalDate, $departureDate) {
                 $query
                     ->where('arrival_date', '<', $departureDate)
                     ->where('departure_date', '>', $arrivalDate);
-            })
-            ->exists();
+            });
+
+        if ($ignoreReservationId !== null) {
+            $query->whereKeyNot($ignoreReservationId);
+        }
+
+        return ! $query->exists();
     }
 
     /**
